@@ -14,19 +14,8 @@ public class GameInfo {
         user = inputData.nextLine();
         System.out.println("welcome " + user + " to the Rock-Paper-Scissors!");
         System.out.println("                ENJOY! \n");
-        System.out.println("If you like to play best out of Three press 3\n" +
-                "or if you like to play best out of Five press 5 ??\n" +
-                "then press Enter:");
+        System.out.println("Please enter the number of rounds you would like to play...?\n");
         roundsCount = inputData.nextInt();
-        try {
-            if (roundsCount == 3 || roundsCount == 5) {
-                System.out.println("Let's start the game:\n");
-            } else {
-                System.out.println("Please enter 3 or 5 for the correct game");
-            }
-        } catch (InputMismatchException e) {
-
-        }
     }
 
     public void keysInfo() {
