@@ -2,7 +2,7 @@ package com.rps;
 
 import java.util.Objects;
 
-public class Scissors {
+public class Scissors implements Move{
     final String scissors;
 
     public Scissors(String scissors) {
@@ -10,7 +10,7 @@ public class Scissors {
     }
 
     public String getScissors() {
-        return "Scissors";
+        return scissors;
     }
 
     @Override
@@ -25,5 +25,10 @@ public class Scissors {
     public int hashCode() {
 
         return Objects.hash(scissors);
+    }
+
+    @Override
+    public String move(String move) {
+        return scissors;
     }
 }

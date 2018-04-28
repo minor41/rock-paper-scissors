@@ -2,7 +2,7 @@ package com.rps;
 
 import java.util.Objects;
 
-public class Rock {
+public class Rock implements Move{
     final String rock;
 
     public Rock(String rock) {
@@ -10,7 +10,7 @@ public class Rock {
     }
 
     public String getRock() {
-        return "Rock";
+        return rock;
     }
 
     @Override
@@ -27,4 +27,8 @@ public class Rock {
         return Objects.hash(rock);
     }
 
+    @Override
+    public String move(String move) {
+        return rock;
+    }
 }

@@ -2,7 +2,7 @@ package com.rps;
 
 import java.util.Objects;
 
-public class Paper {
+public class Paper implements Move{
     final String paper;
 
     public Paper(String paper) {
@@ -10,7 +10,7 @@ public class Paper {
     }
 
     public String getPaper() {
-        return "Paper";
+        return paper;
     }
 
     @Override
@@ -24,6 +24,11 @@ public class Paper {
     @Override
     public int hashCode() {
         return Objects.hash(paper);
+    }
+
+    @Override
+    public String move(String move) {
+        return paper;
     }
 }
 
