@@ -2,11 +2,11 @@ package com.rps;
 
 public class RpsRunner {
     public static void main(String[] args) {
-        GameScore gameScore = new GameScore();
-        GameInfo gameInfo = new GameInfo(gameScore);
-        GameLogic gameLogic = new GameLogic(gameScore, gameInfo);
-        gameInfo.setTheGame();
-        gameInfo.keysInfo();
+        GameInfo gameInfo = new GameInfo();
+        GameStart gameStart = new GameStart(gameInfo);
+        GameLogic gameLogic = new GameLogic(gameInfo, gameStart);
+        gameStart.setTheGame();
+        gameStart.keysInfo();
         gameLogic.gameLogic();
         gameLogic.gameMessage();
     }
