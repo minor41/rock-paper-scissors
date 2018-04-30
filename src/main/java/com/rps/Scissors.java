@@ -2,15 +2,12 @@ package com.rps;
 
 import java.util.Objects;
 
-public class Scissors implements Move{
-    final String scissors;
+public class Scissors extends Move {
+    final String name = "Scissors";
 
-    public Scissors(String scissors) {
-        this.scissors = scissors;
-    }
-
-    public String getScissors() {
-        return scissors;
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -18,17 +15,17 @@ public class Scissors implements Move{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Scissors scissors1 = (Scissors) o;
-        return Objects.equals(scissors, scissors1.scissors);
+        return Objects.equals(name, scissors1.name);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(scissors);
+        return Objects.hash(name);
     }
 
     @Override
-    public String move(String move) {
-        return scissors;
+    public String toString() {
+        return "Scissors ";
     }
 }

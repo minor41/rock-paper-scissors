@@ -1,5 +1,14 @@
 package com.rps;
 
-public interface Move {
-    String move(String move);
+public class Move {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Move ";
+    }
 }
