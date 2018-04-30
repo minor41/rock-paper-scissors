@@ -23,7 +23,7 @@ public class GameStart {
                 String rounds = inputData.nextLine();
                 roundsCount = Integer.valueOf(rounds);
             } catch (Exception e) {
-                System.out.println("Enter correct number value");
+                System.out.println("Please enter correct number value!");
             }
         }
         gameInfo.setUser(user);
