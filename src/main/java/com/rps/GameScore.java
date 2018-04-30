@@ -58,12 +58,11 @@ public class GameScore {
 
     @Override
     public String toString() {
-        return "GameScore: " +
-                "user= " + user + '\'' +
-                "number of rounds= " + roundsCount + "\n"+
-                user +" points= " + userPoints + "\n"+
-                "computer points= " + computerPoints + "\n"+
-                user +" chose= " + playerMove + "\n"+
-                "computer chose= " + computerMove + "\n";
+        return "GameScore: \n" +
+                "user: " + user + "\n" +
+                user +" have points: " + userPoints + "\n"+
+                "computer has points: " + computerPoints + "\n"+
+                user +" chose: " + playerMove + "\n"+
+                "computer chose: " + computerMove + "\n";
     }
 }

@@ -3,19 +3,34 @@ package com.rps;
 import java.util.Scanner;
 
 public class GameInfo {
-    private String user;
-    private int roundsCount;
+    private GameScore gameScore;
+    private int roundsCount = 0;
     private Scanner inputData = new Scanner(System.in);
+
+    public GameInfo(GameScore gameScore) {
+        this.gameScore = gameScore;
+    }
 
     public void setTheGame() {
         System.out.println("Shall we play this game...?");
         System.out.println("Please write your name and press ENTER");
-        user = inputData.nextLine();
+        String user = inputData.nextLine();
         System.out.println("welcome " + user + " to the Rock-Paper-Scissors!");
         System.out.println("                ENJOY! \n");
         System.out.println("Please enter the number of rounds you would like to play...?");
-        roundsCount = inputData.nextInt();
+        int roundsCount = 0;
+        while (roundsCount == 0) {
+            try {
+                String rounds = inputData.nextLine();
+                roundsCount = Integer.valueOf(rounds);
+            } catch (Exception e) {
+                System.out.println("Enter correct number value");
+            }
+        }
+        gameScore.setUser(user);
+        gameScore.setRoundsCount(roundsCount);
     }
+
 
     public void keysInfo() {
         System.out.println("Game Rules:\n" +
