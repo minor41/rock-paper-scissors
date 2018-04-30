@@ -3,7 +3,8 @@ package com.rps;
 public class RpsRunner {
     public static void main(String[] args) {
         GameInfo game = new GameInfo();
-        GameLogic gameLogic = new GameLogic(new GameScore());
+        GameScore gameScore = new GameScore();
+        GameLogic gameLogic = new GameLogic(gameScore);
         game.setTheGame();
         game.keysInfo();
         try {
