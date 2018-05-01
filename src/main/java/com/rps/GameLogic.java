@@ -7,8 +7,6 @@ public class GameLogic {
     private Scanner sc = new Scanner(System.in);
     private GameInfo gameInfo;
     private GameStart gameStart;
-    private int wins = 0;
-    private int loses = 0;
 
     public GameLogic(GameInfo gameInfo, GameStart gameStart) {
         this.gameStart = gameStart;
@@ -130,12 +128,10 @@ public class GameLogic {
             System.out.println(gameInfo);
             System.out.println("Computer won the this game \n" + gameInfo.getComputerPoints() + " : " +
                     gameInfo.getUserPoints());
-            //loses++;
         } else if (gameInfo.getUserPoints() > gameInfo.getComputerPoints()) {
             System.out.println(gameInfo);
-            System.out.println(gameInfo.getUser() + " won the this game \n" + gameInfo.getComputerPoints() + " : " +
-                    gameInfo.getUserPoints());
-            //wins++;
+            System.out.println(gameInfo.getUser() + " you won the this game \n" + gameInfo.getUserPoints() + " : " +
+                    gameInfo.getComputerPoints());
         }
     }
 }
